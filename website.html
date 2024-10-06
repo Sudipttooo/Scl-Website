@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saint Joseph Higher Secondary School</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@300;600&family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f0f4f8, #e6ebf5);
+            color: #333;
+            line-height: 1.6;
+            position: relative;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+        .logo-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://sjs.edu.bd/new/assets/img/logor.png') no-repeat center;
+            background-size: cover;
+            opacity: 0.05; /* Adjust opacity for effect */
+            z-index: -1; /* Place it behind other content */
+        }
+        header {
+            background: linear-gradient(135deg, #6a1b9a, #4a148c);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: background 0.5s;
+        }
+        header:hover {
+            background: linear-gradient(135deg, #9c27b0, #7b1fa2);
+        }
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.5em;
+            margin: 0;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 2s;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #eaeaea;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #fff;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        }
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        .mySlides {
+            display: none;
+            width: 100%;
+            border-radius: 10px;
+        }
+        .slide-image {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .frosted-glass {
+            position: relative;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 10px;
+        }
+        .content {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            position: relative;
+            z-index: 1; /* Ensure content is above the background */
+        }
+        .footer {
+            text-align: center;
+            padding: 15px 0;
+            background: linear-gradient(135deg, #6a1b9a, #4a148c);
+            color: white;
+            width: 100%;
+            font-size: 0.9em;
+        }
+        h2 {
+            color: #6a1b9a;
+            font-family: 'Montserrat', sans-serif;
+            border-bottom: 2px solid #6a1b9a;
+            padding-bottom: 5px;
+        }
+        h3 {
+            color: #4a148c;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        .hidden {
+            display: none;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #6a1b9a;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        button:hover {
+            background-color: #5e35b1;
+            transform: scale(1.05);
+        }
+        .testimonials {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+            nav a {
+                margin: 0 10px;
+            }
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="logo-background"></div>
+
+<header>
+    <h1>Saint Joseph Higher Secondary School</h1>
+    <nav>
+        <a href="#about">About Us</a>
+        <a href="#courses">Courses</a>
+        <a href="#admissions">Admissions</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<div class="slideshow-container">
+    <div class="mySlides">
+        <div class="frosted-glass">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Saint_Joseph_Higher_Secondary_School_-_North_building.jpg/220px-Saint_Joseph_Higher_Secondary_School_-_North_building.jpg" class="slide-image" alt="Campus Image 1">
+        </div>
+    </div>
+    <div class="mySlides">
+        <div class="frosted-glass">
+            <img src="https://www.international.sjs.edu.bd/static/media/viewFromField.8d85c49088713226d02b.jpg" class="slide-image" alt="Campus Image 2">
+        </div>
+    </div>
+    <div class="mySlides">
+        <div class="frosted-glass">
+            <img src="https://www.international.sjs.edu.bd/static/media/field.7c520f471502a5f764b6.jpg" class="slide-image" alt="Campus Image 3">
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <section id="about">
+        <h2>About Us</h2>
+        <div class="card">
+            <h3>Our Institution</h3>
+            <p>The Institution in Retrospect<br>
+            Running under the tutelage and leadership of the Brothers of Holy Cross, a Roman Catholic Religious Congregation dedicated and committed to promoting education among the common masses, the present St. Joseph Higher Secondary School saw the light of the day on 19 March, 1954 as St. Joseph High School at 16, Monir Hossain Lane, Narinda, the heart of the then Dhaka City, with only four students. The school was founded by the late Brother Jude Costello, C.S.C. who was then the Headmaster of St. Gregory's High School. As the Headmaster of the school for a short time since its inception, he steered the school to a considerable expansion. The steady increase in the number of students in the following years expedited the necessity of shifting the school to a conveniently larger site at 32, Shah Sahib Lane at Narinda. The late Brother Jude Costello, C.S.C., a great scholar and exponent of educational expansion, acquired property for the school in Mohammadpur area.<br><br>
+
+            He was soon taken over by Brother Fulgence Dougherty, C.S.C. who shouldered the responsibility to erect buildings in the new site at Asad Gate. Later on, Brother Gerald Kraeger took over the duties and responsibilities of the Headmaster and carried the remaining work through. The ease of access to Mohammadpur, the big playground and the steady progress of skilled workmen drew the attention of the student community of Dhaka city. And eventually the school was shifted to its newly-built campus at 97 Asad Avenue, Mohammadpur, Dhaka 1207 in 1965.<br><br>
+
+            Initially, the school was an English Medium International School following the syllabus and curriculum of the University of Cambridge. But in accordance with the decision of the Government, the school was transformed into a Bengali Medium Secondary School in 1972 under the Board of Intermediate and Secondary Education, Dhaka.<br><br>
+
+            Brother John Rozario, C.S.C., a legendary Principal of St. Joseph Higher Secondary School during 1990-2007, now acting as the Emeritus Principal, conceived the idea of transforming the secondary school into a Higher Secondary School. He made great strides in promoting the school to college level. Under his leadership and patronage, the school ventured to open the College Section with an English version Science Section in 1999 and turned out to be a great success in the very first year of Board Exams. In 2001 Bengali version Science Sections and Business Studies Section and in 2004 Humanities Section were added for further extension of the institution.<br><br>
+
+            Bro. John Rozario C.S.C also initiated an English version (NCTB Curriculum) Section of Class-VI in 2004. Now the school section has three sections in each class, of which one is the English version.<br><br>
+
+            <strong>Aims and Goals</strong><br>
+            The words Advancing in Wisdom and Virtue in the mono-gram of the institution, best serve the purpose and goals of the institution. The prime objectives of the institution are to impart quality education to the students, get them possessed with the best of human qualities, make them aware of their rights and responsibilities, develop their leadership quality, promote their sense of morality, social values, fellow feeling and brotherhood and thus creating a complete and perfect individual. St. Joseph is not only an academic institution, but also a place where creativity is nurtured and nourished, individuality is developed at full pelt and social commitment is embedded. Leaders are not born; they are created here.<br><br>
+
+            Highlighting the Holy Cross tradition, St. Joseph initiates initiatives in developing the heart of every individual student so that they become humans in every respect. They from the very beginning of their life, become secular and step ahead to meet the needs of the community people.<br><br>
+
+            <strong>The Institution at a Glance</strong><br>
+            St. Joseph Higher Secondary School stands out as one of the premier institutions of Bangladesh. The institution has accumulated an enviable fame in terms of outstanding performance of the students in the public exams as well as an overflow of students from around the country to accommodate to 100% passing rates with a very substantial number of GPA-5 over the years. A congenial atmosphere of the institution for teaching and learning has attracted people who value the essence of true education. St. Joseph opens doors for the students to open their eyes and minds as well as paves the way for making themselves complete and successful citizens. The students taught here have distinguished themselves in all fields, in all walks of life both at home and abroad. They have excelled others and become prominent figures in all spheres bringing with them a strong sense of duty and responsibility for the strength and prosperity of their beloved nation.<br><br>
+
+            The entrance to St. Joseph Higher Secondary School in Class-III is extremely challenging and truly a long-cherished desire of thousands of parents around the country. Each class (from class-III to class-XII) has intakes at the beginning of an academic session provided that the seats are vacant. Each class (from class-III to class-X) has three sections comprising 180 students of which one is an English version section. Class-XI and class-XII have seven sections each, 5 science sections including an English version section, 1 Business Studies section and 1 Humanities section. Every year a total of more than 740 students are selected from thousands for admission in class-XI.<br><br>
+
+            A team of dedicated, committed, highly competent and experienced faculty educated and trained at home and abroad are serving to help grow students' intellectual capacity and potential following the Holy Cross creed of education and teaching.</p>
+        </div>
+    </section>
+
+    <section id="admissions">
+        <h2>Admissions Information</h2>
+        <div class="card">
+            <h3>Admission for Class 3</h3>
+            <p>The admission process for Class 3 is competitive. Parents are encouraged to apply early as the number of seats is limited. The school conducts an entrance test followed by an interview. Criteria include previous academic performance and recommendations.</p>
+        </div>
+        <div class="card">
+            <h3>Admission for Class 11</h3>
+            <p>Admission to Class 11 is highly sought after. The selection process involves an entrance examination, and successful candidates will be notified. Students are selected based on their academic records and performance in the entrance test.</p>
+        </div>
+    </section>
+
+    <section id="administration">
+        <h2>Administration</h2>
+        <div class="card">
+            <p>The administration of St. Joseph Higher Secondary School is dedicated to providing a conducive learning environment. Our team consists of experienced educators and administrators who are committed to academic excellence and character development.</p>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <h2>Testimonials</h2>
+        <div class="testimonials">
+            <p>"St. Joseph Higher Secondary School provided me with the foundation I needed to excel in my career." - Former Student</p>
+            <p>"The teachers are dedicated, and the environment fosters learning." - Parent</p>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Saint_Joseph_Higher_Secondary_School_-_North_building.jpg/220px-Saint_Joseph_Higher_Secondary_School_-_North_building.jpg" alt="Gallery Image 1">
+            <img src="https://www.international.sjs.edu.bd/static/media/viewFromField.8d85c49088713226d02b.jpg" alt="Gallery Image 2">
+            <img src="https://www.international.sjs.edu.bd/static/media/field.7c520f471502a5f764b6.jpg" alt="Gallery Image 3">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Saint_Joseph_Higher_Secondary_School_-_South_building.jpg/220px-Saint_Joseph_Higher_Secondary_School_-_South_building.jpg" alt="Gallery Image 4">
+        </div>
+    </section>
+</div>
+
+<footer class="footer">
+    &copy; 2024 Saint Joseph Higher Secondary School. All Rights Reserved.
+</footer>
+
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let slides = document.getElementsByClassName("mySlides");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        slides[slideIndex - 1].style.display = "block";  
+        setTimeout(showSlides, 4000); // Change image every 4 seconds
+    }
+</script>
+
+</body>
+</html>
